@@ -56,7 +56,7 @@
     echo "<br>";
 
     $findTarget=20;
-    echo "Target ",$findTarget," in array[",binsearch($findTarget,$sortedNum),"]."
+    echo "Target ",$findTarget," at array[",binsearch($findTarget,$sortedNum),"]."
     ?>
 </body>
 </html>
