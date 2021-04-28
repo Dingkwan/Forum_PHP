@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+</head>
+<body>
+    <form action="reply.php">
+        <fieldset>
+            <legend>个人信息</legend>
+            姓名：<input type="text" name="name"><br>
+            性别：
+            <input type="radio" name="sex" value="male" checked>男
+            <input type="radio" name="sex" value="female">女
+            <br>
+            最高学历：
+            <select name="edu">
+                <option value="gaozhong">高中学历或以下</option>
+                <option value="dazhuan">大专</option>
+                <option value="shuoshi">硕士</option>
+                <option value="boshi">博士</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>其他信息</legend>
+            您喜欢下列哪些活动（可复选）？
+            <input type="checkbox" name="activity[]" value="read">阅读
+            <input type="checkbox" name="activity[]" value="sport">运动
+            <input type="checkbox" name="activity[]" value="movie">看电影
+            <input type="checkbox" name="activity[]" value="travel">旅行
+            <br>
+            你对近年兴起的国片风潮有何看法？
+            <br>
+            <textarea name="think" style="width: 500px;height: 100px;"></textarea>
+        </fieldset>
+        <input type="submit" value="传送数据">
+        <input type="reset" value="重新输入">
+    </form>
+</body>
+</html>
