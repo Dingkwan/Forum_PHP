@@ -1,0 +1,4 @@
+banana:8
+apple:3
+orange:7
+pear:10
