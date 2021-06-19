@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        *{
+            color: white;
+        }
+
+        form{
+            padding: 50px;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 20px;
+        }
+
+        input{
+            color: black;
+        }
+    </style>
+    <title>login</title>
+</head>
+<body style="background-color: black">
+    <h1 style="text-align: center;background-color: blue;padding: 20px">登 录 论 坛</h1>
+    <form method="post" action="check.php">
+        用户名：<input type="text" name="username"/>
+        <br>&nbsp;&nbsp;&nbsp;
+        密码：<input type="password" name="password"/>
+        <br><br>
+        <input style="color: black" type="submit" value="确定">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <input style="color: black" type="reset" value="重新输入">
+    </form>
+    <hr>
+    <p style="text-align: center">若你尚未拥有账号，请<a href="register.html" style="color: orange">注册</a></p>
+</body>
+</html>
