@@ -2,6 +2,8 @@
 
 ## 将forum文件放入phpStudy（或具有类似功能的应用）的WWW目录（或具有类似功能的目录）内，再将forum.sql导入到MySQL中即可使用
 
+###### 注意：你可能需要在"dbtool.inc"文件中修改数据库的地址
+
 管理员账号：admin &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 密码：admin
 
 ### 主要功能：
