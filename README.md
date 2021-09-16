@@ -45,4 +45,26 @@
 - 表**user**，用来存储普通用户信息
 - 表**message**，用来存储帖子的信息
 - 表**reply_message**，用来存储帖子的回复
+<br><br>
 
+表**admin**各字段结构
+
+| 字段名 | 数据类型 | 长度 | 主键 | 说明 |
+| ----- | ------- | ---- | --- | ---- |
+| username | VARCHAR | 20 | 是 | 用户名 |
+| password | VARCHAR | 20 | - | 密码 |
+| mail | VARCHAR | 30 | - | 电邮地址 |
+| sex | VARCHAR | 10 | - | 性别 |
+| tel | VALCHAR | 20 | - | 电话号码 |
+
+<br><br>
+
+表**user**各字段结构
+
+| 字段名 | 数据类型 | 长度 | 主键 | 说明 |
+| ----- | ------- | ---- | --- | ---- |
+| username | VARCHAR | 20 | 是 | 用户名 |
+| password | VARCHAR | 20 | - | 密码 |
+| mail | VARCHAR | 30 | - | 电邮地址 |
+| sex | VARCHAR | 10 | - | 性别 |
+| tel | VALCHAR | 20 | - | 电话号码 |
