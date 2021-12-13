@@ -68,3 +68,29 @@
 | mail | VARCHAR | 30 | - | 电邮地址 |
 | sex | VARCHAR | 10 | - | 性别 |
 | tel | VALCHAR | 20 | - | 电话号码 |
+
+<br><br>
+
+表**message**各字段结构
+
+| 字段名 | 数据类型 | 长度 | 主键 | 说明 |
+| ----- | ------- | ---- | --- | ---- |
+| id | INT | - | 是 | 编号字段（自动增长） |
+| username | VARCHAR | 20 | - | 用户名（作者） |
+| title | TINYTEXT | - | - | 标题 |
+| content | TEXT | - | - | 帖子内容 |
+| date | DATETIME | - | - | 发布日期 |
+| type | VARCHAR | 8 | - | 帖子类型 |
+
+<br><br>
+
+表**reply_message**各字段结构
+
+| 字段名 | 数据类型 | 长度 | 主键 | 说明 |
+| ----- | ------- | ---- | --- | ---- |
+| id | INT | - | 是 | 编号字段（自动增长） |
+| username | VARCHAR | 20 | - | 用户名（作者） |
+| title | TINYTEXT | - | - | 所回复帖子的标题 |
+| content | TEXT | - | - | 回复内容 |
+| date | DATETIME | - | - | 发布日期 |
+| reply_id | INT | - | - | 回复的帖子的id，用来区分此回复属于哪个帖子 |
