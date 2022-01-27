@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.7
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- 主机： localhost:8889
--- 生成日期： 2021-06-20 06:00:06
--- 服务器版本： 5.7.32
--- PHP 版本： 7.4.12
+-- 主机： localhost
+-- 生成日期： 2022-01-27 17:13:59
+-- 服务器版本： 8.0.28
+-- PHP 版本： 7.4.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -19,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- 数据库： `forum`
 --
+CREATE DATABASE IF NOT EXISTS `forum` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+USE `forum`;
 
 -- --------------------------------------------------------
 
@@ -32,7 +35,7 @@ CREATE TABLE `admin` (
   `mail` varchar(30) NOT NULL,
   `sex` varchar(10) NOT NULL,
   `tel` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- 转存表中的数据 `admin`
@@ -48,20 +51,13 @@ INSERT INTO `admin` (`username`, `password`, `mail`, `sex`, `tel`) VALUES
 --
 
 CREATE TABLE `message` (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `username` varchar(20) NOT NULL,
   `title` tinytext NOT NULL,
   `content` text NOT NULL,
   `date` datetime NOT NULL,
   `type` varchar(8) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- 转存表中的数据 `message`
---
-
-INSERT INTO `message` (`id`, `username`, `title`, `content`, `date`, `type`) VALUES
-(5, 'admin', 'test', 'test-ad', '2021-06-18 22:38:09', '体育');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -70,21 +66,13 @@ INSERT INTO `message` (`id`, `username`, `title`, `content`, `date`, `type`) VAL
 --
 
 CREATE TABLE `reply_message` (
-  `id` int(11) NOT NULL,
+  `id` int NOT NULL,
   `username` varchar(20) NOT NULL,
   `title` tinytext NOT NULL,
   `content` text NOT NULL,
   `date` datetime NOT NULL,
-  `reply_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- 转存表中的数据 `reply_message`
---
-
-INSERT INTO `reply_message` (`id`, `username`, `title`, `content`, `date`, `reply_id`) VALUES
-(10, 'admin', 'test', 'qqq', '2021-06-19 00:01:49', 5),
-(11, 'admin', 'test', 'qqqqqqq', '2021-06-19 00:01:53', 5);
+  `reply_id` int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -98,14 +86,13 @@ CREATE TABLE `user` (
   `mail` varchar(30) NOT NULL,
   `sex` varchar(10) NOT NULL,
   `tel` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
 -- 转存表中的数据 `user`
 --
 
 INSERT INTO `user` (`username`, `password`, `mail`, `sex`, `tel`) VALUES
-('test', 'test111', 'test@test111', '女', '11111'),
 ('user', 'user', 'user@user11', '男', '001');
 
 --
@@ -144,13 +131,14 @@ ALTER TABLE `user`
 -- 使用表AUTO_INCREMENT `message`
 --
 ALTER TABLE `message`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- 使用表AUTO_INCREMENT `reply_message`
 --
 ALTER TABLE `reply_message`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
